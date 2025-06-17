@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>ZESTprofile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(ellipse at top, #0a0a0a, #001f0f);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .cover {
+      background: url('https://images.unsplash.com/photo-1531746790731-6c087fecd65a') center/cover no-repeat;
+      height: 200px;
+      position: relative;
+      border-bottom: 3px solid #a4ffaf55;
+    }
+
+    .neon-glow {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #a4ffaf44;
+      pointer-events: none;
+      filter: blur(15px);
+      animation: pulse 2s infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.8); opacity: 0.5; }
+      100% { transform: scale(1.2); opacity: 1; }
+    }
+
+    .content-wrapper {
+      max-width: 400px;
+      margin: -60px auto 20px auto;
+      background-color: #000000cc;
+      padding: 30px 20px;
+      border-radius: 16px;
+      border: 1px solid #a4ffaf33;
+      box-shadow: 0 0 15px #a4ffaf20;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid #a4ffaf;
+      object-fit: cover;
+      box-shadow: 0 0 15px #a4ffaf70;
+      margin-top: -70px;
+    }
+
+    h1 {
+      margin-top: 15px;
+      color: #a4ffaf;
+      font-size: 26px;
+      text-shadow: 0 0 8px #a4ffaf;
+    }
+
+    .bio {
+      font-size: 15px;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #111;
+      color: white;
+      border: 1px solid #a4ffaf;
+      padding: 12px 20px;
+      margin: 12px auto;
+      width: 280px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .social-link:hover {
+      background-color: #1b1b1b;
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #a4ffaf88;
+    }
+
+    .social-link i {
+      margin-right: 10px;
+      color: #a4ffaf;
+      font-size: 20px;
+      width: 25px;
+      text-align: center;
+    }
+
+    .phone {
+      margin-top: 25px;
+      font-size: 16px;
+      color: #a4ffaf;
+      text-shadow: 0 0 5px #a4ffaf70;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      padding: 20px 10px;
+      margin-top: 40px;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cover"></div>
+
+  <div class="neon-glow" id="glow"></div>
+
+  <div class="content-wrapper">
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/189749218?v=4" alt="Avatar của bạn">
+    <h1>ZEST</h1>
+    <div class="bio">Hello! My name is Huy</div>
+
+    <a href="https://www.tiktok.com/@jlh.dylm" class="social-link" target="_blank">
+      <i class="fab fa-tiktok"></i> TikTok
+    </a>
+
+    <a href="https://www.facebook.com/share/1C71Z6UJpV/?mibextid=wwXIfr" class="social-link" target="_blank">
+      <i class="fab fa-facebook-f"></i> Facebook
+    </a>
+
+    <a href="https://www.instagram.com/phuhuy_n?igsh=ZGRqM2VoM3E0bWs3&utm_source=qr" class="social-link" target="_blank">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+
+    <a href="https://x.com/phhuynguyn93273?s=21" class="social-link" target="_blank">
+      <i class="fab fa-x-twitter"></i> X (Twitter)
+    </a>
+
+    <div class="phone">ZÉPLÀO 📞 0333258601</div>
+  </div>
+
+  <footer>
+    &copy; ZEST Profile.by Huy.
+  </footer>
+
+  <script>
+    // Hiệu ứng neon di chuyển theo chuột
+    const glow = document.getElementById('glow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.pageX + 'px';
+      glow.style.top = e.pageY + 'px';
+    });
+  </script>
+</body>
+</html>
